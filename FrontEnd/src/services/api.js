@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api'
-});
+  baseURL: API_URL || 'http://localhost:5000/api'});
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
@@ -18,3 +17,5 @@ export const fetchCategories = () => api.get('/products/categories');
 export const createOrder = (orderData) => api.post('/orders', orderData);
 
 export default api;
+
+const API_URL = 'https://e-shop-pgla.vercel.app/';
