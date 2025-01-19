@@ -1,0 +1,28 @@
+import { GlobalStyles as MuiGlobalStyles } from '@mui/material';
+
+const GlobalStyles = () => {
+  return (
+    <MuiGlobalStyles
+      styles={{
+        '*': {
+          margin: 0,
+          padding: 0,
+          boxSizing: 'border-box',
+        },
+        body: {
+          fontFamily: 'Roboto, sans-serif',
+          backgroundColor: '#f5f5f5',
+        },
+        a: {
+          textDecoration: 'none',
+          color: 'inherit',
+        },
+        'button:focus': {
+          outline: 'none',
+        },
+      }}
+    />
+  );
+};
+
+export default GlobalStyles;
